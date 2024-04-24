@@ -16,8 +16,8 @@ make -j4
 
 
 
-Implementation
-Data Generator
+### Implementation
+# 1. Data Generator
 File: dataset_prep/dataset_generator.py
 Class: ABCGenDataset
 Generation Types (gentype)

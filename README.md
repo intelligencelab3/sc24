@@ -16,12 +16,16 @@ make -j4
 ```
 
 ### Implementation
- # 1. Data generation 
+ #### 1. Data generation 
  ```
 scripts is in dataset_prep/dataset_generator.py.
 class ABCGenDataset:
 ```
 gentype =0 CSA-array Multiplier generation and labeling
+
 gentype =1 CPA Adder generation and labeling
+
 gentype =2 Read a design and generate dataset
+
 gentype =3 Generate Booth-encoded multiplier (tbd)
+

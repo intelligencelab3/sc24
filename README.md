@@ -13,3 +13,19 @@
 cd abc
 make clean
 make -j4
+
+
+
+Implementation
+Data Generator
+File: dataset_prep/dataset_generator.py
+Class: ABCGenDataset
+Generation Types (gentype)
+0: CSA-array Multiplier generation and labeling
+1: CPA Adder generation and labeling
+2: Read a design and generate dataset
+3: Generate Booth-encoded multiplier (tbd)
+Note: ABC is required (ensure a symbolic link to the ABC binary in the current folder):
+
+bash
+ln -s ../abc/abc .

@@ -158,4 +158,4 @@ You can use a pipe to save the results:
 ./spmm_test > result.txt
 ```
 Here is an overall result tested on both RTX6000 and A100 machines respectively:
-![benchmark graphs](acceleration_ratios.png)
+![benchmark graphs](acceleration_ratio.png)

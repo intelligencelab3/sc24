@@ -38,8 +38,9 @@ ABC implementation for data generation.
 // abc/src/proof/acec/acecXor.c
 class Gia_EdgelistMultiLabel()
 ```
-#### 2.Train-Test Demo - training on 8-bit CSA and predicting on 32-bit CSA
-#### Go to abc2pyg
+#### 2.Train-Test Demo:Go to abc2pyg; 
+####training on 8-bit CSA and predicting on 32-bit CSA
+
 #### Dataset Generation
 ```bash
 python ABC_dataset_generation.py --bits 8

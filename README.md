@@ -92,6 +92,11 @@ python gnn_multitask_inference_partition.py     --bits_test 32  --model_path SAG
 python gnn_multitask_inference_partition.py  --bits_test 32    --model_path SAGE_mult8  --design_copies 1 --num-partitions 4 
 # Pre-tarined model SAGE_mult8 which is located in abc2pyg, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. Without application of our boundary recovery.
 ```
+#### Other Datasets
+
+Pre-processed Dataset - CSA (techmapped) and Booth Multipliers
+Check at Huggingface: https://huggingface.co/datasets/yucx0626/Gamora-CSA-Multiplier/tree/main
+
 
 
 ##### Run the Groot-GPU (modified Accel-GCN)

@@ -39,7 +39,7 @@ ABC implementation for data generation.
 class Gia_EdgelistMultiLabel()
 ```
 #### 2.Train-Test Demo:Go to abc2pyg; 
-####training on 8-bit CSA and predicting on 32-bit CSA
+#### training on 8-bit CSA and predicting on 32-bit CSA
 
 #### Dataset Generation
 ```bash

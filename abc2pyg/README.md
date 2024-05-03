@@ -1,4 +1,4 @@
-# Gamora: Graph Learning based Symbolic Reasoning for Large-Scale Boolean Networks (DAC'23) 
+# GROOT: Graph Edge Re-growth and Partitioning for the Verification of Large Designs in Logic Synthesis
 
 ## Installation
 

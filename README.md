@@ -118,6 +118,12 @@ For the python scripts, numpy and scipy are required
 Our benchmark dataset contains 18 graphs; It can be downloaded from https://drive.google.com/file/d/1_sE65oveGpzRdCcExBmUaNG982lUB-Cx/view?usp=drive_link , 
 or you can use the following command:
 
+### Mmeory Utilization
+```bash
+nvidia-smi
+# For each run of accuracy, we used the above command to get the GPU memory utilization (i.e., simultaneously measured the GPU memory)
+```
+
 ```
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1_sE65oveGpzRdCcExBmUaNG982lUB-Cx' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1_sE65oveGpzRdCcExBmUaNG982lUB-Cx" -O 18graphs.tar.gz && rm -rf /tmp/cookies.txt
 ```

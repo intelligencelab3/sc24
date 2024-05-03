@@ -64,68 +64,21 @@ python gnn_multitask_inference.py --model_path SAGE_mult8 --bits_test 32 --desig
 # load the pre-trained model "SAGE_mult8", and test with mult32
 ```
 
-Training INPUT: 8-bit CSA-Mult
-
-Testing INPUT: 32-bit CSA-Mult
-
-```
-# training
-Highest Train: 99.45
-Highest Valid: 100.00
-  Final Train: 98.90
-   Final Test: 99.12
-
-# testing
-mult32
-Highest Train: 0.00 ± nan
-Highest Valid: 0.00 ± nan
-  Final Train: 0.00 ± nan
-   Final Test: 99.95 ± nan
-```
 ##### Training and Inference with partition and edge re-growth
 
 ##### 1 With Boundary Re-growth
 ```bash
 python gnn_multitask_0dg_plainaig_partition.py --bits 8  --bits_test 32 --design_copies 1 --num-partitions 4 --recovery
-# training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions and apply our recovery algorithm
+# training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. We apply our recovery technique to recover the accuracy 
 ```
 
-Training INPUT: 8-bit CSA-Mult
-Testing INPUT: 32-bit CSA-Mult
-Number of Partitions: 4
-Re-growth application: yes
-
-```
-# training
-Highest Train: 99.45
-Highest Valid: 100.00
-  Final Train: 98.90
-   Final Test: 99.10
-
-# testing
-mult32
-Highest Train: 0.00 ± nan
-Highest Valid: 0.00 ± nan
-  Final Train: 0.00 ± nan
-   Final Test: 98.08 ± nan
+##### 1 Without Boundary Re-growth
+```bash
+python gnn_multitask_0dg_plainaig_partition.py --bits 8  --bits_test 32 --design_copies 1 --num-partitions 4 
+# training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. Without application of our boundary recovery.
 ```
 
 
-
-
-
-
-New commands for ABC
-```
-
-abc 01> edgelist -h
-# usage: edgelist: Generate pre-dataset for graph learning (MPNN, GraphSAGE, dense graph matrix)
-# -F : Edgelist file name (*.el)
-# -c : Class map for corresponding edgelist (Only for GraphSAGE; must have -F -c -f all enabled)
-# -f : Features of nodes (Only for GraphSAGE; must have -F -c -f all enabled)
-# -L : Switch to logic netlist without labels (such as AIG and LUT-netlist)
-
-```
 
 
 ##### Run the Groot-GPU (modified Accel-GCN)

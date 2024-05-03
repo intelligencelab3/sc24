@@ -64,7 +64,7 @@ python gnn_multitask_inference.py --model_path SAGE_mult8 --bits_test 32 --desig
 # load the pre-trained model "SAGE_mult8", and test with mult32
 ```
 
-##### Training and Inference with partition and edge re-growth
+##### Training and Inference: Graph partition and edge re-growth
 
 ##### 1 With Boundary Re-growth
 ```bash
@@ -72,13 +72,26 @@ python gnn_multitask_0dg_plainaig_partition.py --bits 8  --bits_test 32 --design
 # training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. We apply our recovery technique to recover the accuracy 
 ```
 
-##### 1 Without Boundary Re-growth
+##### 2 Without Boundary Re-growth
 ```bash
 python gnn_multitask_0dg_plainaig_partition.py --bits 8  --bits_test 32 --design_copies 1 --num-partitions 4 
 # training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. Without application of our boundary recovery.
 ```
 
 
+##### Inference with pre-trained: Graph partition and edge re-growth
+
+##### 1 With Boundary Re-growth
+```bash
+python gnn_multitask_inference_partition.py--bits 8  --bits_test 32 --design_copies 1 --num-partitions 4 --recovery
+# training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. We apply our recovery technique to recover the accuracy 
+```
+
+##### 2 Without Boundary Re-growth
+```bash
+python gnn_multitask_inference_partition.py --bits 8  --bits_test 32 --design_copies 1 --num-partitions 4 
+# training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. Without application of our boundary recovery.
+```
 
 
 ##### Run the Groot-GPU (modified Accel-GCN)

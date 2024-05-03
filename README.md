@@ -83,14 +83,14 @@ python gnn_multitask_0dg_plainaig_partition.py --bits 8  --bits_test 32 --design
 
 ##### 1 With Boundary Re-growth
 ```bash
-python gnn_multitask_inference_partition.py--bits 8  --bits_test 32 --design_copies 1 --num-partitions 4 --recovery
-# training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. We apply our recovery technique to recover the accuracy 
+python gnn_multitask_inference_partition.py     --bits_test 32  --model_path SAGE_mult8 --design_copies 1 --num-partitions 4 --recovery
+# Pre-tarined model SAGE_mult8 which is located in abc2pyg, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. We apply our recovery technique to recover the accuracy 
 ```
 
 ##### 2 Without Boundary Re-growth
 ```bash
-python gnn_multitask_inference_partition.py --bits 8  --bits_test 32 --design_copies 1 --num-partitions 4 
-# training with mult8, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. Without application of our boundary recovery.
+python gnn_multitask_inference_partition.py  --bits_test 32    --model_path SAGE_mult8  --design_copies 1 --num-partitions 4 
+# Pre-tarined model SAGE_mult8 which is located in abc2pyg, and testing with mult32, Here we partition the inference graph (multi32)  into 4 partitions. Without application of our boundary recovery.
 ```
 
 
